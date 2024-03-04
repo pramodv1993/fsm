@@ -12,5 +12,5 @@ With this, we enter the standard input where we can start typing symbols.
 ![Alt text](images/image-1.png)
 ![Alt text](images/image-2.png)
 - To restore a saved machine use the `--restore` flag as shown:
-![Alt text](images/image-3.png)
+!![Alt text](images/image_4.png)
 
