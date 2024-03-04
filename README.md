@@ -1,5 +1,5 @@
 ## Finite State Machine (FSM)
-A Demo showcasing a generic implementation of a Finite State Machine along a toy problem: `Candy Counter` that leverages this framework. Some more examples can be found in [design.ipynb](design.ipynb) notebook,
+A Demo showcasing a generic implementation of a Finite State Machine along with a toy problem: `Candy Counter` that leverages this framework.
 ### UML Design of the FSM
 <img src="images/uml_fsm.png" width="600">
 
@@ -29,3 +29,4 @@ The [run.py](run.py) script is used to test the toy problem. Configurations to t
 - To restore a saved machine use the `--restore` flag as shown:
 ![Alt text](images/image_4.png)
 
+ Some more responses of the script can be found in [test_results.ipynb](test_results.ipynb) notebook.
