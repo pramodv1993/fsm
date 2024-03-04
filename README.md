@@ -1,16 +1,31 @@
-#### Finite State Machine
-A Demo repository showcasing a generic implementation of a Finite State Machine along a toy problem: `Candy Counter` that leverages this framework. The high-level designs and assumptions can be found in [design.ipynb](design.ipynb) notebook
+## Finite State Machine (FSM)
+A Demo showcasing a generic implementation of a Finite State Machine along a toy problem: `Candy Counter` that leverages this framework. Some more examples can be found in [design.ipynb](design.ipynb) notebook,
+### UML Design of the FSM
+<img src="images/uml_fsm.png" width="600">
 
-##### Quick Start:
-There are multiple command line options to test the script [run.py](run.py) such as static input, via file or the standard input, To restore a persisted fsm etc. Here are some examples:-
+### State machine for the ToyProblem: Candy Counter
+A machine that counts lollipops in a conveyor belt that fails when count of similar lollipops encoutered is 3.
+<img src="images/design.jpg" width="600">
 
-- Simple way to test the script is to run:<br>
-`python3 run.py` <br>
-With this, we enter the standard input where we can start typing symbols.
+#### Assumptions:
+- Lemon and Strawberry flavored lollipops identified by the symbols '`l`' and '`s`' are counted using their respective counters idenfitied by the states ($q_{l}$) and ($q_{s}$).
+- Termination state $q_{f}$ can be reached at any point by the symbol '`c`'
+- The possible causes for error state ($q_{e}$):
+    - `lll` or `sss` are seen
+- To persist machine state during unforeseen failures in the machine, the following situations are considered as failures:
+    - Unknown symbol encountered by the machine
+    - KeyboardInterrupt error if the input symbol is accepted via standard input
+
+
+
+### Quick Start:
+The [run.py](run.py) script is used to test the toy problem. Configurations to the machine can be specified via the respective flags  such as command line, file or standard input, to restore a persisted FSM etc. Here are some examples:-
+
+- To run the script b y providing inputs via the standard-input:<br>
+`python run.py` <br>
 ![Alt text](images/image.png)
 - To specify the input as a string and persist when failure (eg invald symbol or Keyboard Interrupt), you can use the options `--inp` and the `--persist` flags respectively as shown:
 ![Alt text](images/image-1.png)
-![Alt text](images/image-2.png)
 - To restore a saved machine use the `--restore` flag as shown:
 ![Alt text](images/image_4.png)
 
