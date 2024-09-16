@@ -3,7 +3,6 @@ from typing import Optional
 from fsm_service.fsm import FSM
 from fsm_service.fsm import State
 
-
 class LollipopCounter(State):
     def __init__(self, id: str) -> None:
         super().__init__(id=id, val=0)
